@@ -9,18 +9,16 @@
 		</script><!-- #HeaderTemplate -->
 		
 		<script id="EntryTemplate" type="text/template">
-			<article>
-				<div class="entry-meta">
-					<div class="entry-avatar">
-						<img src="<%= author.avatar.replace( 's=96', 's=40' ) %>" alt="<%= author.name %>">
-					</div>
-					<h3 class="entry-author"><%= author.name %></h3>
-					<p class="entry-time"><%= date %></p>
+			<div class="entry-meta">
+				<div class="entry-avatar">
+					<img src="<%= author.avatar.replace( 's=96', 's=40' ) %>" alt="<%= author.name %>">
 				</div>
-				<div class="entry-content">
-					<%= excerpt %>
-				</div>	
-			</article>
+				<h3 class="entry-author"><%= author.name %></h3>
+				<p class="entry-time"><%= date %></p>
+			</div>
+			<div class="entry-content">
+				<%= excerpt %>
+			</div>	
 		</script><!-- #EntryTemplate -->
 
 		<?php wp_footer(); ?>

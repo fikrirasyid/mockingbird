@@ -34,6 +34,16 @@
 	});
 
 	var EntryView = Backbone.View.extend({
+		tagName: "article",
+		className: "hentry",
+		template: _.template( $("#EntryTemplate").html() ),
+		render: function () {
+			this.$el.html( this.template( this.model ));
+			return this;
+		}
+	});
+
+	var EntriesView = Backbone.View.extend({
 		el: $('#entries'),
 		template: _.template( $('#EntryTemplate').html() ),
 		tagName: "article",
@@ -47,7 +57,11 @@
 			this.collection.fetch({
 				success: function( model, response, options) {
 					_.each( response, function (entry) {
-						that.$el.append( that.template( entry ) );
+						var RenderEntryView = new EntryView({
+							model: entry
+						});
+
+						that.$el.append( RenderEntryView.render().el );
 					});
 				}
 			});
@@ -57,5 +71,5 @@
 	// Init
 	var Mockingbird = [];
 	Mockingbird.header = new HeaderView();
-	Mockingbird.entry = new EntryView();
+	Mockingbird.entries = new EntriesView();
 } (jQuery));
