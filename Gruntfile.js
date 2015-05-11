@@ -8,11 +8,6 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
         less: {
             development: {
-                options: {
-                    compress: true,
-                    yuicompress: true,
-                    optimization: 2
-                },
                 files: {
                     "style.css" : "less/style.less"
                 }
