@@ -49,6 +49,8 @@
 		readEntry: function () {
 			event.preventDefault();
 
+			$('body').css({ 'overflow' : 'hidden' });
+
 			this.$el.append( this.templateRead( this.model ) );
 		},
 		closeEntry: function () {
@@ -58,9 +60,11 @@
 
 			read_entry.addClass( 'closing' );
 
-				read_entry.fadeOut(function(){
-					$(this).remove();
-				});
+			read_entry.fadeOut(function(){
+				$(this).remove();
+
+				$('body').removeAttr( 'style' );
+			});
 		}
 	});
 
