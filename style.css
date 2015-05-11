@@ -677,12 +677,15 @@ a {
   top: 20px;
   left: 20px;
   line-height: 1;
+  width: 40px;
 }
 #content article .entry-avatar img {
   background-clip: padding-box;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
+  width: 100%;
+  background: #dfdfdf;
 }
 #content article .entry-author {
   font-size: 14px;
