@@ -28,7 +28,7 @@
 							<p class="entry-time"><?php the_date(); ?></p>
 						</div>
 						<div class="entry-content">
-							<?php the_excerpt(); ?>
+							<?php the_content(); ?>
 						</div>	
 					</article>
 

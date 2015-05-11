@@ -670,6 +670,7 @@ a {
   position: relative;
   line-height: 1.4;
   border-bottom: 1px solid #EEEEEE;
+  overflow: hidden;
 }
 #content article .entry-avatar {
   position: absolute;
@@ -694,8 +695,19 @@ a {
   font-size: 12px;
   display: inline-block;
 }
-#content article .entry-content p {
-  margin-top: 0;
+#content article .entry-content {
   font-size: 14px;
   line-height: 1.6;
+}
+#content article .entry-content a:hover {
+  text-decoration: underline;
+}
+#content article .entry-content p {
+  margin-top: 0;
+}
+#content article .entry-content li {
+  margin-bottom: 5px;
+}
+#content article .entry-content img {
+  max-width: 100%;
 }
