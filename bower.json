@@ -1,0 +1,7 @@
+{
+	"name": "mockingbird",
+	"version": "1.0.0",
+	"dependencies": {
+		"normalize-less": "0.0.2"
+	}
+}
