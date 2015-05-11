@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="entries">
+<div id="entries" data-page="1" data-page-loading="false">
 	
 </div><!-- #entries -->
 

@@ -11,7 +11,9 @@
 
 	var EntryCollection = Backbone.Collection.extend({
 		model: Entry,
-		url: mockingbird_params.api_endpoint + 'posts'
+		url: function () {
+			return mockingbird_params.api_endpoint + 'posts?page=' + parseInt( $('#entries').attr('data-page') );
+		}
 	});
 
 	// View
@@ -88,6 +90,10 @@
 
 						that.$el.append( RenderEntryView.render().el );
 					});
+
+					// Update page count
+					var next_page = parseInt( $('#entries').attr('data-page') ) + 1;
+					$('#entries').attr({ 'data-page' : next_page, 'data-page-loading' : 'false' });
 				}
 			});
 		}
@@ -97,4 +103,19 @@
 	var Mockingbird = [];
 	Mockingbird.header = new HeaderView();
 	Mockingbird.entries = new EntriesView();
+
+	// Pagination
+	$(window).scroll(function(){
+		var document_height = $(document).height();
+		var window_height = $(window).height();
+		var window_top_offset = $(window).scrollTop();
+		var loading_point = document_height - ( window_height * 1.5 );
+		var entries = $('#entries');
+
+		if( window_top_offset > loading_point && entries.attr( 'data-page-loading') != 'true' ){
+			console.log( 'habburn' );
+			entries.attr({ 'data-page-loading' : 'true' });
+			Mockingbird.entries = new EntriesView();	
+		}
+	});
 } (jQuery));
