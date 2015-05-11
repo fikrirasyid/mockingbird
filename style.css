@@ -619,34 +619,34 @@ th {
 }
 @-webkit-keyframes readEntryIn {
   0% {
-    margin-left: 100%;
+    margin-top: 100%;
   }
   100% {
-    margin-left: 0;
+    margin-top: 0;
   }
 }
 @keyframes readEntryIn {
   0% {
-    margin-left: 100%;
+    margin-top: 100%;
   }
   100% {
-    margin-left: 0;
+    margin-top: 0;
   }
 }
 @-webkit-keyframes readEntryOut {
   0% {
-    margin-left: 0;
+    margin-top: 0;
   }
   100% {
-    margin-left: 100%;
+    margin-top: 100%;
   }
 }
 @keyframes readEntryOut {
   0% {
-    margin-left: 0;
+    margin-top: 0;
   }
   100% {
-    margin-left: 100%;
+    margin-top: 100%;
   }
 }
 body {
@@ -766,10 +766,10 @@ a {
 }
 .read-entry .entry {
   position: absolute;
-  top: 0;
+  top: 54px;
   right: 0;
   bottom: 0;
-  left: 80px;
+  left: 0;
   background: #FEFEFE;
   z-index: 30;
   border-box: box-sizing;
