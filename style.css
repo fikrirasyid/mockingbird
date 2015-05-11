@@ -617,6 +617,38 @@ th {
 .genericon-leftarrow:before {
   content: '\f503';
 }
+@-webkit-keyframes readEntryIn {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes readEntryIn {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes readEntryOut {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+@keyframes readEntryOut {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
 body {
   background: #fefefe;
   color: #646464;
@@ -669,7 +701,7 @@ a {
   padding: 20px 20px 20px 80px;
   position: relative;
   line-height: 1.4;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
   overflow: hidden;
 }
 #content article .entry-avatar {
@@ -677,14 +709,14 @@ a {
   top: 20px;
   left: 20px;
   line-height: 1;
-  width: 40px;
 }
 #content article .entry-avatar img {
+  width: 40px;
+  height: 40px;
   background-clip: padding-box;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
-  width: 100%;
   background: #dfdfdf;
 }
 #content article .entry-author {
@@ -713,4 +745,94 @@ a {
 }
 #content article .entry-content img {
   max-width: 100%;
+}
+.read-entry {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.read-entry .modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  content: '';
+  z-index: 20;
+}
+.read-entry .entry {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  background: #FEFEFE;
+  z-index: 30;
+  border-box: box-sizing;
+  box-shadow: 0px 2px 6px 0px rgba(161, 161, 161, 0.5);
+  -webkit-animation-name: readEntryIn;
+  animation-name: readEntryIn;
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.read-entry .entry .entry-meta {
+  padding: 8px 20px 8px 80px;
+  border-bottom: 1px solid #eeeeee;
+}
+.read-entry .entry .entry-avatar {
+  position: absolute !important;
+  top: 8px !important;
+  left: 20px !important;
+  line-height: 1 !important;
+}
+.read-entry .entry .entry-avatar img {
+  width: 40px !important;
+  height: 40px !important;
+  background-clip: padding-box !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: #dfdfdf !important;
+}
+.read-entry .entry .entry-author {
+  font-size: 14px;
+  margin: 0;
+  display: inline-block;
+  color: #000000;
+}
+.read-entry .entry .entry-time {
+  color: #9c9c9c;
+  font-size: 12px;
+  display: inline-block;
+}
+.read-entry .entry .entry-content {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.read-entry .entry .entry-content a:hover {
+  text-decoration: underline;
+}
+.read-entry .entry .entry-content p {
+  margin-top: 0;
+}
+.read-entry .entry .entry-content li {
+  margin-bottom: 5px;
+}
+.read-entry .entry .entry-content img {
+  max-width: 100%;
+}
+.read-entry.closing .entry {
+  -webkit-animation-name: readEntryOut;
+  animation-name: readEntryOut;
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }

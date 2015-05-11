@@ -37,9 +37,30 @@
 		tagName: "article",
 		className: "hentry",
 		template: _.template( $("#EntryTemplate").html() ),
+		templateRead: _.template( $('#ReadEntryTemplate').html() ),
 		render: function () {
 			this.$el.html( this.template( this.model ));
 			return this;
+		},
+		events: {
+			"click a.more-link": "readEntry",
+			"click .read-entry > .modal": "closeEntry"
+		},
+		readEntry: function () {
+			event.preventDefault();
+
+			this.$el.append( this.templateRead( this.model ) );
+		},
+		closeEntry: function () {
+			event.preventDefault();
+
+			var read_entry = this.$el.find( '.read-entry' );
+
+			read_entry.addClass( 'closing' );
+
+				read_entry.fadeOut(function(){
+					$(this).remove();
+				});
 		}
 	});
 

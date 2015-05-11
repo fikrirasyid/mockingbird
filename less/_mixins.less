@@ -27,3 +27,36 @@
 		max-width: 100%;
 	}
 }
+
+.entry-avatar( @top: 20px ){
+    .entry-avatar{
+		position: absolute;
+	    top: @top;
+	    left: 20px;
+	    line-height: 1;
+
+	    img{           
+		    width: 40px;
+		    height: 40px;     
+	        .border-radius( 50% );
+	        background: #dfdfdf;
+	    }    	
+    }
+}
+
+.entry-author(){
+	.entry-author{
+		font-size: 14px;
+		margin: 0;
+		display: inline-block;
+		color: #000000;
+	}	
+}
+
+.entry-time(){
+	.entry-time{
+		color: @color-entry-time;
+		font-size: 12px;
+		display: inline-block;
+	}	
+}
