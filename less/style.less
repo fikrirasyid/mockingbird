@@ -12,3 +12,112 @@ Text Domain: mockingbird
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+// Import
+@import "bower_components/normalize-less/normalize";
+@import (less) "bower_components/genericons/genericons.css";
+@import "_mixins";
+
+// Variables
+@body-background: #FEFEFE;
+@color-text: #646464;
+@color-accent: #009688;
+@color-entry-time: #9C9C9C;
+
+// Base
+body{
+	background: @body-background;
+	color: @color-text;
+}
+
+#app{
+	display: block;
+	margin: 0 auto;
+}
+
+// Global
+a{
+	color: @color-accent;
+	text-decoration: none;
+}
+
+// Header
+#header{
+	background: @color-accent;
+	color: white;
+	padding:15px 20px 15px 80px;
+	position: relative;
+	line-height: 1.2;
+
+	a{
+		color: white;
+		text-decoration: none;
+	}
+}
+
+#site-title{
+	font-size: 20px;
+	margin: 0;
+}
+
+#toggle-menu{
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 18px;
+	left: 30px;
+	.border-radius( 0 );
+	border: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	background: none;
+
+	&:before{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// content
+#content{
+	article{
+		padding:20px 20px 20px 80px;
+		position: relative;
+		line-height: 1.4;
+		border-bottom: 1px solid #EEEEEE;
+
+		.entry-avatar{
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			line-height: 1;
+
+			img{				
+				.border-radius( 50% );
+			}
+		}
+
+		.entry-author{
+			font-size: 14px;
+			margin: 0;
+			display: inline-block;
+			color: #000000;
+		}
+
+		.entry-time{
+			color: @color-entry-time;
+			font-size: 12px;
+			display: inline-block;
+		}
+
+		.entry-content{
+			p{
+				margin-top: 0;
+				font-size: 14px;
+				line-height: 1.6;
+			}
+		}
+	}
+}

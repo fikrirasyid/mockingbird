@@ -6,7 +6,7 @@
 	<body <?php body_class();?>>
 		<div id="app">
 			<header id="header">
-				<button id="toggle-menu">Toggle Menu</button>
+				<button id="toggle-menu" class="genericon genericon-menu">Toggle Menu</button>
 				<h1 id="site-title">
 					<a href="<?php echo esc_url( site_url() ); ?>">
 						<?php bloginfo( 'name' ); ?>
@@ -25,7 +25,7 @@
 								<?php echo get_avatar( get_the_author_meta( 'user_email' ), 40 ); ?>
 							</div>
 							<h3 class="entry-author"><?php the_author(); ?></h3>
-							<p class="entry-date"><?php the_date(); ?></p>
+							<p class="entry-time"><?php the_date(); ?></p>
 						</div>
 						<div class="entry-content">
 							<?php the_excerpt(); ?>
