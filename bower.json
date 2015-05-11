@@ -1,7 +1,8 @@
 {
-	"name": "mockingbird",
-	"version": "1.0.0",
-	"dependencies": {
-		"normalize-less": "0.0.2"
-	}
+  "name": "mockingbird",
+  "version": "1.0.0",
+  "dependencies": {
+    "normalize-less": "0.0.2",
+    "genericons": "Automattic/Genericons#~3.0.3"
+  }
 }

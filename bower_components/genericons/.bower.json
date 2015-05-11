@@ -1,0 +1,15 @@
+{
+  "name": "genericons",
+  "homepage": "https://github.com/Automattic/Genericons",
+  "version": "3.0.3",
+  "_release": "3.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.3",
+    "commit": "0baeeca02933cc5f269d09a93130bf9e24d120cf"
+  },
+  "_source": "git://github.com/Automattic/Genericons.git",
+  "_target": "~3.0.3",
+  "_originalSource": "Automattic/Genericons",
+  "_direct": true
+}
