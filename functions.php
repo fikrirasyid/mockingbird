@@ -28,7 +28,16 @@ add_action( 'after_setup_theme', 'mockingbird_setup' );
  * @return void
  */
 function mockingbird_scripts(){
-	wp_enqueue_style( 'mockingbird_style', get_stylesheet_uri() );
+	// Add stylesheet
+	wp_enqueue_style( 'mockingbird-style', get_stylesheet_uri() );
+
+	// Adding scripts
+	wp_enqueue_script( 'mockingbird-script', get_template_directory_uri() . '/js/mockingbird.js', array( 'jquery', 'underscore', 'backbone' ), '1.0.0', true );
+
+	// Load parameters
+	wp_localize_script( 'mockingbird-script', 'mockingbird_params', array(
+		'api_endpoint' => esc_url( home_url( '/wp-json/' ) )
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'mockingbird_scripts' );
 

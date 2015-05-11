@@ -1,5 +1,28 @@
 			</div><!-- #content -->
-		</div><!-- #app -->
+		</div><!-- #app -->		
+		
+		<script id="HeaderTemplate" type="text/template">
+			<button id="toggle-menu" class="genericon genericon-menu">Toggle Menu</button>
+			<h1 id="site-title">
+				<a href="<%= URL %>"><%= name %></a>
+			</h1>
+		</script><!-- #HeaderTemplate -->
+		
+		<script id="EntryTemplate" type="text/template">
+			<article>
+				<div class="entry-meta">
+					<div class="entry-avatar">
+						<img src="<%= author.avatar.replace( 's=96', 's=40' ) %>" alt="<%= author.name %>">
+					</div>
+					<h3 class="entry-author"><%= author.name %></h3>
+					<p class="entry-time"><%= date %></p>
+				</div>
+				<div class="entry-content">
+					<%= excerpt %>
+				</div>	
+			</article>
+		</script><!-- #EntryTemplate -->
+
 		<?php wp_footer(); ?>
 	</body>
 </html>
