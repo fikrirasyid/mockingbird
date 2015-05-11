@@ -1,0 +1,34 @@
+# Copyright (C) 2015 Fikri Rasyid
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mockingbird 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-05-11 02:09:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#. Theme Name of the plugin/theme
+msgid "Mockingbird"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://fikrirasy.id/portfolio/mockingbird"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Simple proof of concept of backbone powered theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Fikri Rasyid"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://fikrirasy.id"
+msgstr ""
